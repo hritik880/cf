@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        
+        <title>Codeforces Scraper</title>
+        <style type="text/css" rel="stylesheet">
+
+        </style>
+
+    </head>
+<!-- #292929 -->
+    <body style="background-color: #F3E6E0">
+
+        <div class="container-fluid">
+            <!-- Introductory header -->
+            <div class="text-center pt-5">
+                <div class=""><h1>Codeforces Scraper</h1></div>
+                <div class="row justify-content-center">
+                    <div class="col-md-9 lead">A tool to scrap problem statements of problems from Codeforces and convert them into pdf.
+                        You can select multiple problems or arbitrary list of problems to download into pdf.
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <!-- Section to input problemset's page number whose quesions need to be scraped -->
+            <div>
+                <form id="form_0" class="text-center py-3" novalidate>
+                    <div class="row justify-content-center">
+                            <label class="mb-0 mt-1 lead">Enter problemset page no to display its problems</label>
+                            <div class="col-md-3 col-7">
+                                <input type="number" class="form-control px-2" id="pageno" min="1" placeholder="between 1 to max-page inclusive" required>
+                                <div class="invalid-feedback text-left">Please enter number from 1 to max-page only.</div>
+                            </div>
+                            <div class="col-md-1 col-2 p-0"><button id="form_0_submit" class="col-12 btn btn-primary" type="button">Submit</button></div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Displaying scraped problems as table and providing "Download" button -->
+            <div id="prob_table" class="row justify-content-center"></div>
+
+        </div>
+
+        <!-- Javascript file controlling whole process -->
+        <script src = "{{ url_for('static', filename = 'app_script.js') }}" ></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
